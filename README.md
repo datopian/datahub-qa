@@ -1,6 +1,7 @@
+[![Gitter](https://img.shields.io/gitter/room/frictionlessdata/chat.svg)](https://gitter.im/datahubio/chat)
 <p align="center">
   <a href="https://datahub.io/">
-    <img alt="babel" src="http://datahub.io/static/img/logo-cube.png" width="146">
+    <img alt="datahub" src="http://datahub.io/static/img/logo-cube.png" width="146">
   </a>
 </p>
 
@@ -18,4 +19,4 @@ and ask there!
 If you would prefer to get help via live chat rather than the issue tracker in
 this repository, you can try:
 
-* [Gitter Datahub.io room](https://gitter.im/datahubio/)
+[Gitter Datahub.io room](https://gitter.im/datahubio/)
