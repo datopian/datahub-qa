@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://babeljs.io/">
-    <img alt="babel" src="http://datahub.io/static/img/logo-cube.png" width="546">
+  <a href="https://datahub.io/">
+    <img alt="babel" src="http://datahub.io/static/img/logo-cube.png" width="146">
   </a>
 </p>
 
@@ -8,7 +8,7 @@
   Bugs, issues and suggestions re datahub.io.
 </p>
 
-## [Create a new issue](https://github.com/datahubio/qa/issues/new)
+## Create a new issue
 
 If you have a question about DataHub.io, [create a new issue](https://github.com/datahubio/qa/issues/new)
 and ask there!
