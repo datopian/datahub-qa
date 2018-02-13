@@ -12,3 +12,5 @@ Last column shows how many issues was closed on this date (issues with 'Duplicat
 Data is sourced from the github API.
 Process is recorded and automated in python script.
 You should run `process.py` every day to have the actual day-to-day information.
+
+---
