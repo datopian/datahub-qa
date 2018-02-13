@@ -15,7 +15,6 @@ script:
   - python3 process.py
   # push the dataset on the datahub.io using data-cli tool
   - sh save_data_credentials.sh
-  - data login
   - data push
 
 # this section actually do 'git push' back to the branch
