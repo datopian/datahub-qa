@@ -3,5 +3,13 @@ language: python
 python:
   - "3.5"
 script:
+  - npm install -g data-cli
   - pip3 install requests
   - python3 process.py
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: updates
