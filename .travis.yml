@@ -14,8 +14,8 @@ script:
   # Update the dataset: count issues and update 'data/issues.csv'
   - python3 process.py
   # push the dataset on the datahub.io using data-cli tool
-  # 1. authorize;   2. data push
-  - sh authorize_data_cli.sh
+  - sh save_data_credentials.sh
+  - data login
   - data push
 
 # this section actually do 'git push' back to the branch
