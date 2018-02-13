@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Exporting 'core' user credentials.";
-echo "Don't worry, it is secured!";
+echo "Exporting datahub user credentials.";
+echo "Don't worry, it is secured in the Travis!";
 
 mkdir .config/datahub -p
 cat <<EOF > .config/datahub/config.json
