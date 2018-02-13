@@ -2,4 +2,6 @@ language: python
 sudo: enabled
 python:
   - "3.5"
-script: python3 process.py
+script:
+  - pip3 install requests
+  - python3 process.py
