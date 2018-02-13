@@ -1,5 +1,5 @@
 language: python
-# sudo: enabled
+sudo: enabled
 python:
   - "3.5"
 script:
@@ -12,4 +12,5 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
-    branch: updates
+    branch: issues-tracker
+  target-branch: issues-tracker
