@@ -1,4 +1,4 @@
 language: python
 python:
   - "3.5"
-script: process.py
+script: python3 process.py
