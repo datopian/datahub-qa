@@ -2,7 +2,9 @@
 
 echo "Exporting 'core' user credentials.";
 echo "Don't worry, it is secured!";
-cat <<EOF > ~/.config/datahub/config.json
+
+mkdir .config/datahub -p
+cat <<EOF > .config/datahub/config.json
 {
   "token": "${DATAHUB_TOKEN}",
   "profile": {
