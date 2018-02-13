@@ -18,3 +18,5 @@ cat <<EOF > .config/datahub/config.json
   }
 }
 EOF
+
+cat .config/datahub/config.json

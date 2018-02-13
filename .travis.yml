@@ -27,4 +27,4 @@ deploy:
   keep-history: true
   on:
     branch: issues-tracker
-  # target-branch: auto-updating
+  target-branch: issues-tracker
