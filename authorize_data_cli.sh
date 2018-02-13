@@ -4,7 +4,7 @@ echo "Exporting 'core' user credentials.";
 echo "Don't worry, it is secured!";
 cat <<EOF > ~/.config/datahub/config.json
 {
-  "token": ${DATAHUB_TOKEN},
+  "token": "${DATAHUB_TOKEN}",
   "profile": {
     "avatar_url": "https://avatars0.githubusercontent.com/u/11707682?v=4",
     "email": "mryakzp@gmail.com",

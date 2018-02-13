@@ -11,16 +11,15 @@ python:
 script:
   - npm install -g data-cli
   - pip3 install requests
-  # count issues and update 'data/issues.csv'
+  # Update the dataset: count issues and update 'data/issues.csv'
   - python3 process.py
-  # push dataset on the datahub.io using data-cli tool
+  # push the dataset on the datahub.io using data-cli tool
   # 1. authorize;   2. data push
-  - authorize_data_cli.sh
+  - sh authorize_data_cli.sh
   - data push
 
 # this section actually do 'git push' back to the branch
 # I added it to save the updated 'data/issues.csv'
-
 deploy:
   provider: pages
   skip-cleanup: true
