@@ -46,3 +46,7 @@ If you would prefer to get help via live chat rather than the issue tracker in
 this repository, you can try:
 
 [Gitter Datahub.io room](https://gitter.im/datahubio/)
+
+## day-to-day statistics
+
+https://datahub.io/examples/datahub-qa-issues-tracker
