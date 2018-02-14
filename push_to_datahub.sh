@@ -4,7 +4,7 @@ echo "Exporting datahub user credentials.";
 echo "Don't worry, it is secured in the Travis!";
 
 mkdir .config/datahub -p
-cat <<EOF > ~/.config/datahub/config.json
+cat <<EOF > .config/datahub/config.json
 {
   "token": "${DATAHUB_TOKEN}",
   "profile": {
@@ -19,4 +19,6 @@ cat <<EOF > ~/.config/datahub/config.json
 }
 EOF
 
-cat ~/.config/datahub/config.json
+cat .config/datahub/config.json
+
+data push --debug --public
