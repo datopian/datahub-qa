@@ -14,7 +14,7 @@ script:
   # Update the dataset: count issues and update 'data/issues.csv'
   - python3 process.py
   # push the dataset on the datahub.io using data-cli tool
-  - sh save_creds.sh
+  # - sh save_creds.sh
   - data push
 
 # this section actually do 'git push' back to the branch
@@ -27,3 +27,9 @@ deploy:
   on:
     branch: issues-tracker
   target-branch: issues-tracker
+
+env:
+  global:
+    id: a08d3588fbae0355042537595c65819d
+    username: AcckiyGerman
+  TRAVIS_SECURE_ENV_VARS: true
