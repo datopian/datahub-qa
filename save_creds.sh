@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
+set -ev
 
 echo "Exporting datahub user credentials.";
 echo "Don't worry, it is secured in the Travis!";
 
-mkdir .config/datahub -p
+mkdir ~/.config
+mkdir ~/.config/datahub
+
 cat <<EOF > ~/.config/datahub/config.json
 {
   "token": "${DATAHUB_TOKEN}",
