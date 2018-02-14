@@ -29,7 +29,7 @@ deploy:
   target-branch: issues-tracker
 
 env:
-global:
-  id: examples
-  username: examples
-TRAVIS_SECURE_ENV_VARS: true
+  global:
+    id: examples
+    username: examples
+  TRAVIS_SECURE_ENV_VARS: true
