@@ -46,3 +46,20 @@ If you would prefer to get help via live chat rather than the issue tracker in
 this repository, you can try:
 
 [Gitter Datahub.io room](https://gitter.im/datahubio/)
+
+
+## Daily statistics
+
+Datahub-QA issues dataset shows daily statistics for this issue-tracker repo.
+Watch it here: https://datahub.io/examples/datahub-qa-issues-tracker
+
+### Data
+
+Dataset count issues with labels:  
+**'Critical', 'Major', 'Minor', 'Trivial', 'NEW FEATURE', 'closed'**
+
+Last column shows how many issues was closed on this date (issues with 'Duplicate' label not counts)
+
+Data is sourced from the github API.
+Process is recorded and automated in python script.
+Data updates daily using Travis cron job.
