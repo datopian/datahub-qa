@@ -50,7 +50,7 @@ def count_closed_last_24h():
     issues_num = 0
     for issue in r.json():
         labels = [l['name'] for l in issue['labels']]
-        if 'duplicate' not in labels:
+        if 'duplicate' not in labels and 'invalid' not in labels:
             issues_num += 1
     return issues_num
 

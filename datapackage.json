@@ -61,15 +61,26 @@
   "views": [
     {
       "name": "graph",
-      "title": "datahub-QA issues day-to-day",
+      "title": "datahub-QA issues day-to-day counter",
       "specType": "simple",
       "resources": ["issues"],
       "spec": {
         "type": "line",
         "group": "date",
         "series": [
-          "Critical", "Major", "Minor", "Trivial", "NEW FEATURES", "closed"
+          "Critical", "Major", "Minor", "Trivial", "NEW FEATURES"
         ]
+      }
+    },
+    {
+      "name": "bars",
+      "title": "daily opened|closed issues statistic",
+      "resources": ["issues"],
+      "specType": "simple",
+      "spec": {
+        "type": "bar",
+        "group": "date",
+        "series": ["closed"]
       }
     }
   ]
