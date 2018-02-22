@@ -68,7 +68,7 @@
         "type": "line",
         "group": "date",
         "series": [
-          "Critical", "Major", "Minor", "Trivial", "NEW FEATURES"
+          "Critical", "Major", "Minor", "Trivial", "NEW FEATURE"
         ]
       }
     },
