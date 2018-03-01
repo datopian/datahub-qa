@@ -1,0 +1,2 @@
+# .config added for avoid saving datahub user credentials in the repo.
+.config/

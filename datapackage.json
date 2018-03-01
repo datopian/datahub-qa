@@ -1,0 +1,87 @@
+{
+  "name": "datahub-qa-issues-tracker",
+  "title": "datahub-qa",
+  "resources": [
+    {
+      "path": "data/issues.csv",
+      "pathType": "local",
+      "name": "issues",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "escapeChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "date",
+            "type": "date",
+            "format": "default"
+          },
+          {
+            "name": "Critical",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Major",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Minor",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Trivial",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "NEW FEATURE",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "closed",
+            "type": "integer",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "name": "graph",
+      "title": "datahub-QA issues day-to-day counter",
+      "specType": "simple",
+      "resources": ["issues"],
+      "spec": {
+        "type": "line",
+        "group": "date",
+        "series": [
+          "Critical", "Major", "Minor", "Trivial", "NEW FEATURE"
+        ]
+      }
+    },
+    {
+      "name": "bars",
+      "title": "daily opened|closed issues statistic",
+      "resources": ["issues"],
+      "specType": "simple",
+      "spec": {
+        "type": "bar",
+        "group": "date",
+        "series": ["closed"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# this job should be executed daily
+# Settings is here: https://travis-ci.org/datahq/datahub-qa/settings
+
+# WARNING: disable 'Build pushed branches' and 'Build pushed pull requests'
+# in the repo travis settings, otherwise you will loop this job,
+# as it is publishing (do `git push`) back to the same branch.
+
+language: python
+sudo: enabled
+python:
+  - "3.5"
+script:
+  - npm install -g data-cli
+  - pip3 install requests
+  # Update the dataset: count issues and update 'data/issues.csv'
+  - python3 process.py
+  # push the dataset on the datahub.io using data-cli tool
+  - data push
+
+# this section actually do 'git push' back to the branch
+# I added it to save the updated 'data/issues.csv'
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: issues-tracker
+  target-branch: issues-tracker
+
+env:
+  global:
+    id: examples
+    username: examples
+  TRAVIS_SECURE_ENV_VARS: true
