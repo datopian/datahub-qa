@@ -17,16 +17,16 @@ script:
   # push the dataset on the datahub.io using data-cli tool
   - data push
 
-# this section actually do 'git push' back to the branch
-# I added it to save the updated 'data/issues.csv'
+# this section do 'git push' back to the branch
+# I added it to save the 'data/issues.csv' updated by 'process.py' script
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
-    branch: issues-tracker
-  target-branch: issues-tracker
+    branch: master
+  target-branch: master
 
 env:
   global:
