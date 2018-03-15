@@ -7,7 +7,6 @@ Run it daily to have the actual information
 """
 import os
 import csv
-from pprint import pprint
 import requests
 from datetime import datetime, timedelta
 
@@ -50,13 +49,7 @@ def count_closed_last_24h():
     """
     issues_num = 0
     for issue in r.json():
-        try:
-            labels = [l['name'] for l in issue['labels']]
-        except:  # sometimes response is not correct, let's see it
-            print('Something wrong with the response:')
-            pprint(r.json())
-            exit(1)
-
+        labels = [l['name'] for l in issue['labels']]
         if 'duplicate' not in labels and 'invalid' not in labels:
             issues_num += 1
     return issues_num
