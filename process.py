@@ -34,7 +34,7 @@ def count_open_issues(label):
 
 
 def count_closed_last_24h():
-    print('get issues, closed last 24h')
+    print('get issues, closed last 24h', end=' ... ')
     r = requests.get(API, params={
         'state': 'closed',
         'since': str(datetime.now() - timedelta(days=1))
@@ -53,6 +53,7 @@ def count_closed_last_24h():
         labels = [l['name'] for l in issue['labels']]
         if 'duplicate' not in labels and 'invalid' not in labels:
             issues_num += 1
+    print(issues_num)
     return issues_num
 
 
