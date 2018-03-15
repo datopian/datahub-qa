@@ -26,9 +26,10 @@ path = 'data/issues.csv'
 
 
 def count_open_issues(label):
-    print('get "%s" issues' % label)
+    print('get "%s" issues' % label, end=" ... ")
     r = requests.get(API, params={'labels': label})
     issues = r.json()
+    print(len(issues))
     return len(issues)
 
 
