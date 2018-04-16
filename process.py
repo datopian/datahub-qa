@@ -15,6 +15,8 @@ from datetime import datetime, timedelta
 # github API docs https://developer.github.com/v3/issues/#list-issues-for-a-repository
 API = "https://api.github.com/repos/datahq/datahub-qa/issues"
 # script will get and count issues with the given labels:
+GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+# script will get and count issues with the given labels:
 labels_to_track = [
     'Severity: Critical',
     'Severity: Major',
@@ -28,7 +30,7 @@ path = 'data/issues.csv'
 
 def count_open_issues(label):
     print('get "%s" issues' % label, end=" ... ")
-    r = requests.get(API, params={'labels': label})
+    r = requests.get(API, params={'labels': label, 'access_token': GITHUB_TOKEN})
     issues = r.json()
     print(len(issues))
     return len(issues)
