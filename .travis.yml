@@ -30,6 +30,6 @@ deploy:
 
 env:
   global:
-    id: examples
-    username: examples
+    id: datahq
+    username: datahq
   TRAVIS_SECURE_ENV_VARS: true
