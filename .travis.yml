@@ -9,6 +9,8 @@ language: python
 sudo: enabled
 python:
   - "3.5"
+install:
+- sudo apt install xsel
 script:
   - npm install -g data-cli
   - pip3 install requests
