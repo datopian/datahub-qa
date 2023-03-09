@@ -45,7 +45,7 @@ We also have a **Blocker** label in cases where this issue blocks someone from w
 If you would prefer to get help via live chat rather than the issue tracker in
 this repository, you can try:
 
-[Gitter Datahub.io room](https://gitter.im/datahubio/)
+[Discord](https://discord.com/invite/KrRzMKU)
 
 
 ## Daily statistics
