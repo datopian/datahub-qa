@@ -24,4 +24,4 @@ Head to the discussion forum: 👉 https://github.com/datahubio/datahub/discussi
 
 If you would prefer to get help via live chat check out our discord 👉
 
-[Discord](https://discord.com/invite/KrRzMKU)
+[Discord](https://discord.gg/xfFDMPU9dC)
