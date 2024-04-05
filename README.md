@@ -1,3 +1,10 @@
+<br /><br />
+<h1 align="center">Migrated to 👉 https://github.com/datopian/datahub</h1>
+<br /><br />
+
+---
+---
+
 <p align="center">
   <a href="https://datahub.io/">
     <img alt="datahub" src="http://datahub.io/datahub-cube.svg" width="146">
